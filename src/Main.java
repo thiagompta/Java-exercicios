@@ -10,11 +10,11 @@ public class Main {
                 """;
         System.out.print(texto);
         int numero = leitor.nextInt();
-        if (numero % 2 == 0){
-            System.out.println("O numero é par");
-        }else{
-            System.out.println("O numero é impar");
+        int fatorial = 1;
+        for (int i = 1; i <= numero; i++) {
+            fatorial *= i;
         }
+        System.out.println("Fatorial de " + numero + " é: " + fatorial);
 
     }
     }
