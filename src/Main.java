@@ -5,26 +5,16 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        int numeroGerado = new Random().nextInt(101); // gera um número aleatório entre 0 e 100
-        int tentativas = 0;
-        int numeroDigitado = 0;
-
-        while (tentativas < 5) {
-            System.out.println("Digite um numero entre 0 a 100: ");
-            numeroDigitado = leitor.nextInt();
-            tentativas++;
-
-            if (numeroDigitado == numeroGerado) {
-                System.out.println("Parabéns você acertou o numero em " + tentativas);
-                break;
-            } else if (numeroDigitado < numeroGerado) {
-                System.out.println("O número digitado é menor que o número gerado.");
-            } else {
-                System.out.println("O número digitado é maior que o número gerado.");
-            }
-        }
-        if (tentativas == 5 && numeroDigitado != numeroGerado){
-            System.out.println("Você não conseguiu acertar o numero em 05 tentativas "+ numeroGerado);
+        String texto = """
+                Digite 1 numero para ver a tabuada do mesmo
+                """;
+        System.out.print(texto);
+        int contador = 1;
+        int numero = leitor.nextInt();
+        while (contador >= 0 && contador <= 10){;
+            int resultado = numero * contador;
+            System.out.println( numero + "x" + contador + "=" + resultado);
+            contador++;
         }
     }
-}
+    }
